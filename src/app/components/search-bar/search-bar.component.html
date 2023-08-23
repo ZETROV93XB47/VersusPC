@@ -1,0 +1,8 @@
+<div class="search-box">
+  <form (ngSubmit)="onSubmit()">
+    <button class="btn-search">
+      <img class = "searchIcon" alt="" ngSrc="assets/icons/searchIcon.svg" fill="">
+    </button>
+    <input id="searchProduct" [formControl]="searchForm" type="text" class="input-search" placeholder="Type to Search...">
+  </form>
+</div>

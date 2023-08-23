@@ -1,0 +1,30 @@
+
+.outerBox {
+  width: 350px;
+  height: auto;
+  background-color: #283c57;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.img {
+  border-radius: 8%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.innerBox {
+  //border: 3px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding:15px;
+  //margin: 5px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-color: #304e7c;
+}
