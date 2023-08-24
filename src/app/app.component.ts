@@ -18,7 +18,7 @@ export class AppComponent {
       (data) => {
         this.product = data;
         console.log("let'sgoooooo")
-        console.log(this.product)
+        //console.log(this.product)
       },
       (error) => {
         console.error('Erreur lors de la récupération des données :', error);
@@ -28,6 +28,6 @@ export class AppComponent {
 
   ngOnInit() {
     this.getData();
-    console.log("OK")
+    //console.log("OK")
   }
 }
