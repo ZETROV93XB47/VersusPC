@@ -9,12 +9,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductBlockComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    HeaderComponent
   ],
     imports: [
         BrowserModule,

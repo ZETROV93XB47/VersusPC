@@ -6,7 +6,11 @@ import {ProductBlockComponent} from "./components/product-block/product-block.co
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: [
+    './app.component.scss'
+  ]
+
+
 })
 export class AppComponent {
   product!: Product;

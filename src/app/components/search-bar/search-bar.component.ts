@@ -9,15 +9,16 @@ import {ProductServiceService} from "../../services/product-service.service";
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent {
-  constructor(private productService: ProductServiceService) {}
-  searchForm = new FormControl(1);
+  constructor(private productService: ProductServiceService) {
+
+  }
+  searchForm:FormControl<number | null> = new FormControl(1);
   product!: Product;
 
   @Output() productResponseEvent = new EventEmitter<Product>();
 
   onSubmit() {
-    this.getData(this.searchForm.value);
-    this.productResponseEvent.emit(this.product);
+   this.initData();
   }
 
   getData(pcId: number | null) {
@@ -32,6 +33,11 @@ export class SearchBarComponent {
         console.error('Erreur lors de la récupération des données :', error);
       }
     );
+  }
+
+  initData() {
+    this.getData(this.searchForm.value);
+    this.productResponseEvent.emit(this.product);
   }
 
 }
