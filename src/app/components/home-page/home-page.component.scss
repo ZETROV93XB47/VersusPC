@@ -1,0 +1,67 @@
+.home{
+
+}
+
+.presentation {
+  width: 130em; /* Make the div take the full width */
+  //max-width: 100%; /* Limit the div's width to the image's original width */
+  height: 60em;
+  overflow: hidden; /* Hide any overflow content */
+  //border: 1px solid black;
+  padding: 30px;
+  //background-image:url(http://localhost:4200/assets/Images/home_slider_1.jpg);
+  //background-image:url('./assets/home_slider_1.jpg');
+}
+
+.presentation img {
+  width: 100%; /* Make the image take the full width of its container */
+  height: 100%; /* Maintain the image's aspect ratio */
+  display: block; /* Remove any extra space below the image */
+  //margin: 10px;
+}
+
+.presentation2{
+  display: flex;
+  width: 134em; /* Make the div take the full width */
+  height: 45em;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.presentation2 img {
+  height: 40em;
+  display: block; /* Remove any extra space below the image */
+}
+
+.border-overlay {
+  position: sticky;
+  //top: 12%;
+  left: 2.5%;
+  //right:7%;
+  bottom: 4.75%;
+  width: 95%;
+  height: 90%;
+  border: 1px solid #000000; /* Border style and color */
+  //box-sizing: border-box; /* Include border in width and height calculations */
+}
+
+.border-overlay-2{
+  position: sticky;
+  //top: 12%;
+  //left: 2.5%;
+  //right:7%;
+  bottom: 50%;
+  width: 95%;
+  height: 10%;
+  border: 1px solid #ff0000;
+}
+
+/*
+.presentation div {
+  border-top: 1px solid red;
+  margin: 50px;
+}
+*/
+
+//[ngStyle]="{backgroundImage:'url(../../assets/Images/home_slider_1.jpg)'}"

@@ -1,19 +1,7 @@
-<div class="outerBox">
-<app-search-bar class="innerBoxSearchBar" (productResponseEvent)="handleChildData($event)"></app-search-bar>
-  <img class = "img" alt="" src="{{receivedProductData.photo}}" fill="">
-  <div class="innerBox">{{ receivedProductData.name }}</div>
-  <div class="innerBox">{{ receivedProductData.description }}</div>
-  <div class="innerBox">{{ receivedProductData.cpu }}</div>
-  <div class="innerBox">{{ receivedProductData.gpu }}</div>
-  <div class="innerBox">{{ receivedProductData.ram }}</div>
-  <div class="innerBox">{{ receivedProductData.dalle }}</div>
-  <div class="innerBox">{{ receivedProductData.diagonale}}</div>
-  <div class="innerBox">{{ receivedProductData.ssd }}</div>
-  <div class="innerBox">{{ receivedProductData.hardDrive }}</div>
-  <div class="innerBox">{{ receivedProductData.price }}</div>
-  <div class="innerBox">{{ receivedProductData.brand }}</div>
-  <div class="innerBox">{{ receivedProductData.connectivite }}</div>
-  <div class="innerBox">{{ receivedProductData.os }}</div>
-  <div class="innerBox">{{ receivedProductData.category }}</div>
-  <div class="innerBox">{{ receivedProductData.stock}}</div>
+<div class="product-card">
+  <img src="{{resolvedData.photo}}" alt="Product Name">
+  <h3 class="product-title">{{resolvedData.name}}</h3>
+  <p class="product-description">{{resolvedData.description}}</p>
+  <span class="product-price">{{resolvedData.price}}$</span>
+  <button class="add-to-cart-button">Add to Cart</button>
 </div>

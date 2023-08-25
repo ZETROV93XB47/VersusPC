@@ -3,13 +3,16 @@
     </div >
     <nav class="nav">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/search">Search</a></li>
+            <li><a routerLink="/productPage/15">ProductPage</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
             <li>    <div class="search-bar">
-                <input type="text" placeholder="Recherche...">
+                <form (ngSubmit)="onSubmit()">
+                <input type="text" [formControl]="searchForm" type="text" class="input-search" placeholder="Recherche...">
                 <button type="submit">Rechercher</button>
+                </form>
             </div></li>
         </ul>
     </nav>

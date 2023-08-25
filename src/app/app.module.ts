@@ -10,13 +10,17 @@ import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SearchPageComponent } from './components/search-page/search-page.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductBlockComponent,
     SearchBarComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchPageComponent,
+    HomePageComponent
   ],
     imports: [
         BrowserModule,

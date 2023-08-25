@@ -1,19 +1,16 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomePageComponent} from "./components/home-page/home-page.component";
+import {SearchPageComponent} from "./components/search-page/search-page.component";
 import {ProductBlockComponent} from "./components/product-block/product-block.component";
 import {ProductResolverService} from "./resolvers/ProductResolverService";
-import {SearchBarComponent} from "./components/search-bar/search-bar.component";
 
-//http://localhost:4200/pc/6
 const routes: Routes = [
-  {
-    path: 'pc/:id',
-    component: ProductBlockComponent,
-    resolve: {
-      resolvedData: ProductResolverService // Associate the resolver with the route
-    }
-  },
-  { path: 'first-component', component: SearchBarComponent }
+  { path: '', pathMatch: 'full', component: HomePageComponent },
+  { path: 'search', component: SearchPageComponent },
+  { path: 'productPage/:id', component: ProductBlockComponent, resolve: { resolvedData: ProductResolverService }},
+
+
 ];
 
 @NgModule({
