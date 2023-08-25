@@ -11,6 +11,6 @@ export class SearchPageResolverService implements Resolve<Observable<Product[]>>
     constructor(private productService: ProductServiceService) {}
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Product[]> {
-        return this.productService.getProductsByName("Asus");
+        return this.productService.getProductsByName(route.paramMap.get('productName'));
     }
 }

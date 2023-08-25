@@ -8,7 +8,9 @@ import {SearchPageResolverService} from "./resolvers/SearchPageResolverService";
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
-  { path: 'search', component: SearchPageComponent, resolve: { resolvedData: SearchPageResolverService }},
+//  { path: 'search', component: SearchPageComponent, resolve: { resolvedData: SearchPageResolverService }},
+  { path: 'search/:productName', component: SearchPageComponent, resolve: { resolvedData: SearchPageResolverService }},
+
   { path: 'productPage/:id', component: ProductBlockComponent, resolve: { resolvedData: ProductResolverService }},
   //{ path: 'productPage/:id', component: SearchPageComponent, resolve: { resolvedData: ProductResolverService }},
 

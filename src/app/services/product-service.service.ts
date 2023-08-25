@@ -22,7 +22,7 @@ export class ProductServiceService {
     return this.httpClient.get<Product[]>(this.HOME_PRODUCTS_URL);
   }
 
-  getProductsByName(name: string):Observable<Product[]> {
+  getProductsByName(name: string | null):Observable<Product[]> {
     return this.httpClient.get<Product[]>(this.SEARCH_PRODUCTS_BY_NAME_URL+name);
   }
 

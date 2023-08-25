@@ -16,8 +16,17 @@ export class HeaderComponent {
     product!: Product;
     //@Output() productResponseEvent = new EventEmitter<Product>();
 
+/*
     onSubmit() {
         this.router.navigate(['productPage', this.searchForm.value], { relativeTo: this.route })
+            .then(() => {
+                window.location.reload();
+            });
+    }
+*/
+
+    onSubmit() {
+        this.router.navigate(['search', this.searchForm.value], { relativeTo: this.route })
             .then(() => {
                 window.location.reload();
             });
