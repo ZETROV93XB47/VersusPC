@@ -1,7 +1,7 @@
-import {Component, EventEmitter, Output} from '@angular/core';
-import {ProductServiceService} from "../../services/product-service.service";
+import {Component} from '@angular/core';
 import {FormControl} from "@angular/forms";
 import {Product} from "../../models/Product";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -11,32 +11,23 @@ import {Product} from "../../models/Product";
   ]
 })
 export class HeaderComponent {
-    constructor(private productService: ProductServiceService) {}
+    constructor(private router: Router, private route: ActivatedRoute) {}
     searchForm:FormControl<number | null> = new FormControl();
     product!: Product;
-
-    @Output() productResponseEvent = new EventEmitter<Product>();
+    //@Output() productResponseEvent = new EventEmitter<Product>();
 
     onSubmit() {
-        this.initData();
+        this.router.navigate(['productPage', this.searchForm.value], { relativeTo: this.route })
+            .then(() => {
+                window.location.reload();
+            });
     }
 
-    getData(pcId: number | null) {
-        console.log(pcId)
-        const productURL = "http://localhost:8080/products/pc/";
-        this.productService.getProduit(productURL+pcId).subscribe(
-            (data) => {
-                this.product = data;
-                console.log(data);
-            },
-            (error) => {
-                console.error('Erreur lors de la récupération des données :', error);
-            }
-        );
-    }
-
-    initData() {
-        this.getData(this.searchForm.value);
-        this.productResponseEvent.emit(this.product);
+    goToPage(value: number | null) {
+        this.router.routeReuseStrategy.shouldReuseRoute = function () {
+            return false;
+        }
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigate(['/productPage', value]);
     }
 }

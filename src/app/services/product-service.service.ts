@@ -9,6 +9,8 @@ import {HttpClient} from "@angular/common/http";
 export class ProductServiceService {
 
   private HOME_PRODUCTS_URL = "http://localhost:8080/products/pc/getHomeProducts";
+  private SEARCH_PRODUCTS_BY_NAME_URL = "http://localhost:8080/products/pc/name/";
+
 
   constructor(private httpClient: HttpClient) {}
 
@@ -18,6 +20,10 @@ export class ProductServiceService {
 
   getHomeProducts():Observable<Product[]> {
     return this.httpClient.get<Product[]>(this.HOME_PRODUCTS_URL);
+  }
+
+  getProductsByName(name: string):Observable<Product[]> {
+    return this.httpClient.get<Product[]>(this.SEARCH_PRODUCTS_BY_NAME_URL+name);
   }
 
   /*

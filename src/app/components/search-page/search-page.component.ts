@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Product} from "../../models/Product";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-search-page',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-page.component.scss']
 })
 export class SearchPageComponent {
+  resolvedData!: Product[];
 
+  constructor(private route: ActivatedRoute) {
+    this.resolvedData = this.route.snapshot.data['resolvedData'];
+    console.log(this.route.snapshot.data);
+    console.log(this.resolvedData);
+  }
 }

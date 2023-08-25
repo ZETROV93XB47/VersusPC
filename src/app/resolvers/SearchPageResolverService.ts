@@ -7,10 +7,10 @@ import {Product} from "../models/Product"; // Replace with your data service
 @Injectable({
     providedIn: 'root'
 })
-export class ProductResolverService implements Resolve<Observable<Product>> {
+export class SearchPageResolverService implements Resolve<Observable<Product[]>> {
     constructor(private productService: ProductServiceService) {}
 
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Product> {
-        return this.productService.getProduit("http://localhost:8080/products/pc/"+route.paramMap.get('id'));
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Product[]> {
+        return this.productService.getProductsByName("Asus");
     }
 }

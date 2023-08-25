@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ProductServiceService} from "./services/product-service.service";
 import {Product} from "./models/Product";
-import {ProductBlockComponent} from "./components/product-block/product-block.component";
 
 @Component({
   selector: 'app-root',

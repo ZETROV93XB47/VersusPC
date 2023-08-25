@@ -8,7 +8,7 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./product-block.component.scss']
 })
 export class ProductBlockComponent {
-  //@Input() productData!: Product;
+  @Input() productData!: Product;
 
 
   //receivedProductData!: Product;
