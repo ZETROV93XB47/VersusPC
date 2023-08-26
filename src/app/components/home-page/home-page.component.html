@@ -40,5 +40,10 @@ home
 
     </div>
 
+  <div class="homePageProductsContainer">
+    <div class="homePageProducts">
+      <app-product-block *ngFor="let data of resolvedData" [productData]="data"></app-product-block>
+    </div>
+  </div>
 
 </div>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 import {ProductServiceService} from "../services/product-service.service";
-import {Product} from "../models/Product"; // Replace with your data service
+import {Product} from "../models/Product";
 
 @Injectable({
     providedIn: 'root'

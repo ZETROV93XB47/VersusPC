@@ -12,6 +12,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { HeaderComponent } from './components/header/header.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     SearchBarComponent,
     HeaderComponent,
     SearchPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    ProductDetailsComponent
   ],
     imports: [
         BrowserModule,
