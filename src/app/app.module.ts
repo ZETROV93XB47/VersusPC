@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     HeaderComponent,
     SearchPageComponent,
     HomePageComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    FooterComponent
   ],
     imports: [
         BrowserModule,
