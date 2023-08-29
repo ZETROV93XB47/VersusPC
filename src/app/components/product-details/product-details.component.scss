@@ -1,0 +1,21 @@
+.productDetailsContainer{
+  display: flex;
+  height: auto;
+  border: 3px solid red;
+  flex-direction: column;
+}
+
+.productDetailsPresentationImg{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 3px solid purple;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.productDetailsContent{
+  border: 3px solid yellow;
+  width: 75%;
+  Height: auto;
+}

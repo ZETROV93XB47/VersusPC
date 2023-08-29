@@ -7,7 +7,7 @@ import {Product} from "../models/Product"; // Replace with your data service
 @Injectable({
     providedIn: 'root'
 })
-export class ProductResolverService implements Resolve<Observable<Product>> {
+export class ProductDetailsResolverService implements Resolve<Observable<Product>> {
     constructor(private productService: ProductServiceService) {}
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Product> {

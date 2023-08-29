@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Product} from "../../models/Product";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-product-block',
@@ -10,14 +10,10 @@ import {ActivatedRoute} from "@angular/router";
 export class ProductBlockComponent {
   @Input() productData!: Product;
 
-
-  //receivedProductData!: Product;
-  resolvedData!: Product;
-
-  constructor(private route: ActivatedRoute) {
-    this.resolvedData = this.route.snapshot.data['resolvedData'];
-    console.log(this.route.snapshot.data);
-    console.log(this.resolvedData);
+  constructor(private router: Router, private route: ActivatedRoute) {
+    //this.resolvedData = this.route.snapshot.data['resolvedData'];
+    //console.log(this.route.snapshot.data);
+    //console.log(this.resolvedData);
   }
 
   /*handleChildData(data: Product): Product {
@@ -27,4 +23,10 @@ export class ProductBlockComponent {
   }*/
 
 
+  onSubmit() {
+    this.router.navigate(['../../productPage', this.productData.id], { relativeTo: this.route })
+      .then(() => {
+        window.location.reload();
+      });
+  }
 }

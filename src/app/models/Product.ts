@@ -1,4 +1,5 @@
 export class Product {
+  id: number;
   name: string;
   description: string;
   photo: string;
@@ -17,6 +18,7 @@ export class Product {
   category: string;
 
   constructor(
+    id: number,
     name: string,
     description: string,
     photo: string,
@@ -34,6 +36,7 @@ export class Product {
     brand: string,
     category: string
     ) {
+    this.id = id;
     this.name = name;
     this.description = description;
     this.photo = photo;

@@ -13,5 +13,10 @@
   <h3 class="product-title">{{productData.name}}</h3>
   <p class="product-description">{{productData.description}}</p>
   <span class="product-price">{{productData.price}}$</span>
-  <button class="add-to-cart-button">More details</button>
+
+  <button class="add-to-cart-button" type="submit"><a routerLink="/productPage/{{productData.id}}">More details2</a></button>
+
+  <form (ngSubmit)="onSubmit()">
+    <button class="add-to-cart-button" type="submit">More details</button>
+  </form>
 </div>
