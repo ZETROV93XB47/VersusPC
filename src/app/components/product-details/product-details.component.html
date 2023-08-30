@@ -1,12 +1,99 @@
 <div class="productDetailsContainer">
+
   <div class="productDetailsPresentationImg">
-    <img [alt]="" ngSrc="assets/Images/categories.jpg" height="494" width="1797"/>
+    <img [alt]="" src="assets/Images/categories.jpg" height="494" width="1797"/>
   </div>
-    <div class="productDetailsContent">
-
-  <app-product-block [productData]="resolvedData"></app-product-block>
-
+  <div class="productDetailsContent" id="productDetailsContent">
+  <!--<app-product-block [productData]="resolvedData"></app-product-block>-->
+      <div class="productImgBlock">
+          <div class="firstImg">
+              <img src="{{resolvedData.photo}}" alt="" fill="">
+          </div>
+          <div class="miniImgList">
+              <div class="miniImg">
+                  <img src="{{resolvedData.photo}}" alt="" fill="">
+              </div>
+              <div class="miniImg">
+                  <img src="{{resolvedData.photo}}" alt="" fill="">
+              </div>
+              <div class="miniImg">
+                  <img src="{{resolvedData.photo}}" alt="" fill="">
+              </div>
+              <div class="miniImg">
+                  <img src="{{resolvedData.photo}}" alt="" fill="">
+              </div>
+          </div>
+          <div>
+              <div class="pcInfos">
+              </div>
+          </div>
+      </div>
+      <div class="productInfoBlock">
+          <div>
+              <h1 class="pcInfos">{{resolvedData.name}}</h1>
+              <p class="pcInfos" [ngStyle]="{'color': '#c75151', 'font-size':'30px'}"> <strong>${{resolvedData.price * numberOfProductsInCart}}</strong></p>
+              <p class="pcInfos" [ngStyle]="{'font-size':'30px'}">Availability :  <span [ngStyle]="{'color':resolvedData.stock>10 ? 'green':'red'}" >{{resolvedData.stock+ "  In Stock"}}</span></p>
+          </div>
+          <div class="pcInfos">
+              <p>
+                  <!--Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.-->
+                  {{resolvedData.description}}
+              </p>
+          </div>
+          <div>
+              <div class="pcInfos">
+                  <button class="add-to-cart-button" (click)="addToCart()">
+                      Add to Cart
+                  </button>
+                  <h1 class="pcInfos">Quantity: {{numberOfProductsInCart}}</h1>
+              </div>
+          </div>
+          <p [ngStyle]="{'text-align':'center'}" class = "shareTxt">Share |</p>
+          <div class="social-icons">
+              <div>
+                  <img src="assets/SocilaNetworkIcons/messenger.png">
+              </div>
+              <div>
+                  <img src="assets/SocilaNetworkIcons/twitter.png">
+              </div>
+              <div>
+                  <img src="assets/SocilaNetworkIcons/snap.png">
+              </div>
+              <div>
+                  <img src="assets/SocilaNetworkIcons/linkedin.png">
+              </div>
+              <div>
+                  <img src="assets/SocilaNetworkIcons/instagram.png">
+              </div>
+              <div>
+                  <img src="assets/SocilaNetworkIcons/whatsapp.png">
+              </div>
+              <div>
+                  <img src="assets/SocilaNetworkIcons/gmail.png">
+              </div>
+              <div>
+                  <img src="assets/SocilaNetworkIcons/facebook.png">
+              </div>
+          </div>
+      </div>
+      <!--
+      <div class="productDescription">
+          {{resolvedData.description}}
+      </div>
+      -->
     </div>
+  <div>
+
+  </div>
+  <div>
+
+  </div>
+  <div>
+
+  </div>
+  <div>
+
+  </div>
 
 </div>
 
