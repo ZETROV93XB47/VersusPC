@@ -4,7 +4,6 @@
     <img [alt]="" src="assets/Images/categories.jpg" height="494" width="1797"/>
   </div>
   <div class="productDetailsContent" id="productDetailsContent">
-  <!--<app-product-block [productData]="resolvedData"></app-product-block>-->
       <div class="productImgBlock">
           <div class="firstImg">
               <img src="{{resolvedData.photo}}" alt="" fill="">
@@ -81,6 +80,20 @@
           {{resolvedData.description}}
       </div>
       -->
+    </div>
+    <h2>Related products </h2>
+    <div class="homePageProductsContainer">
+        <div class="homePageProducts">
+            <app-product-block *ngFor="let data of relatedProductsData" [productData]="data"></app-product-block>
+        </div>
+        <div class="newsLetterSubscription">
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
     </div>
   <div>
 

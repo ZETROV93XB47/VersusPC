@@ -20,9 +20,10 @@ const routes: Routes = [
     ]*/},
   { path: 'productPage/:id',
     component: ProductDetailsComponent,
-    resolve: { resolvedData: ProductDetailsResolverService }}
-  //  { path: 'productPage/:productName/:ProductPrice', component: ProductDetailsComponent, resolve: { resolvedData: ProductDetailsResolverService }},
-  //{ path: 'productPage/:id', component: SearchPageComponent, resolve: { resolvedData: ProductResolverService }},
+    resolve: {
+    resolvedData: ProductDetailsResolverService,
+      relatedProductsData: HomePageResolverService
+  }},
 ];
 
 @NgModule({

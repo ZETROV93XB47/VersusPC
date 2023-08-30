@@ -18,11 +18,11 @@
 .productDetailsContent{
   display: flex;
   justify-content:center;
-  //border: 3px solid yellow;
+  border: 1px solid yellow;
   border-radius:10px;
   width: 60%;
   Height: auto;
-  margin-top:10px;
+  margin-top:50px;
   margin-bottom:30px;
   box-shadow: 0px 0px 50px 3px rgba(0,0,0,0.30);
 }
@@ -149,3 +149,28 @@ width: 10em;
 .shareTxt {
   margin-top:25%;
 }
+
+.homePageProductsContainer{
+  width: 90%;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:50px;
+  padding-bottom:50px;
+  margin-bottom:50px;
+  border-bottom:2px solid gray;
+}
+
+.homePageProducts{
+  display: flex;
+  justify-content: space-evenly;
+  //align-items: center;
+  // border: 3px solid red;
+  width: 80%;
+  //height: auto;
+  flex-wrap: wrap;
+  gap: 30px; /* Espacement entre les cartes */
+}
+
+.newsLetterSubscription {}

@@ -11,10 +11,12 @@ import Toastify from 'toastify-js';
 export class ProductDetailsComponent {
 
   @Input() resolvedData!: Product;
+  @Input() relatedProductsData! : Product[];
   numberOfProductsInCart = 1;
 
   constructor(private route: ActivatedRoute) {
     this.resolvedData = this.route.snapshot.data['resolvedData'];
+    this.relatedProductsData = this.route.snapshot.data['relatedProductsData'];
     console.log(this.route.snapshot.data);
     console.log(this.resolvedData);
   }

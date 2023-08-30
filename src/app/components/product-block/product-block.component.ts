@@ -24,6 +24,12 @@ export class ProductBlockComponent {
 
 
   onSubmit() {
+    if(this.router.url === "/home") {
+      this.router.navigate(['../productPage', this.productData.id], { relativeTo: this.route })
+          .then(() => {
+            window.location.reload();
+          });
+    }
     this.router.navigate(['../../productPage', this.productData.id], { relativeTo: this.route })
       .then(() => {
         window.location.reload();
