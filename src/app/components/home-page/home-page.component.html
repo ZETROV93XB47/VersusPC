@@ -18,7 +18,7 @@
     <div>
 
     </div>
-
+    <h2 [ngStyle]="{'text-align':'center'}" >Most Popular products </h2>
   <div class="homePageProductsContainer">
     <div class="homePageProducts">
       <app-product-block *ngFor="let data of resolvedData" [productData]="data"></app-product-block>

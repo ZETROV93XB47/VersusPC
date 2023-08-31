@@ -15,6 +15,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductDetailsBlockComponent } from './product-details-block/product-details-block.component';
+import { ContactPageComponent } from './components/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductDetailsBlockComponent } from './product-details-block/product-de
     HomePageComponent,
     ProductDetailsComponent,
     FooterComponent,
-    ProductDetailsBlockComponent
+    ProductDetailsBlockComponent,
+    ContactPageComponent
   ],
     imports: [
         BrowserModule,

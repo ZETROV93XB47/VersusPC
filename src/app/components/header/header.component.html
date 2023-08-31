@@ -4,10 +4,12 @@
     <nav class="nav">
         <ul>
             <li><a routerLink="/home">Home</a></li>
-            <li><a routerLink="/search">Search</a></li>
-            <li><a routerLink="/productPage/15">ProductPage</a></li>
+            <!--<li><a routerLink="/search">Search</a></li>-->
+            <!--<li><a routerLink="/productPage/15">ProductPage</a></li>-->
             <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
             <li>    <div class="search-bar">
                 <form (ngSubmit)="onSubmit()">
                 <input type="text" [formControl]="searchForm" type="text" class="input-search" placeholder="Recherche...">

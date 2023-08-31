@@ -7,23 +7,13 @@ import {ProductDetailsResolverService} from "./resolvers/ProductDetailsResolverS
 import {SearchPageResolverService} from "./resolvers/SearchPageResolverService";
 import {HomePageResolverService} from "./resolvers/HomePageResolverService";
 import {ProductDetailsComponent} from "./components/product-details/product-details.component";
+import {ContactPageComponent} from "./components/contact-page/contact-page.component";
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, resolve: { resolvedData: HomePageResolverService }},
-  { path: 'search/:productName',
-    component: SearchPageComponent,
-    resolve: { resolvedData: SearchPageResolverService },
-    /*children: [
-      { path: 'productPage/:id',
-        component: ProductDetailsComponent,
-        resolve: { resolvedData: ProductDetailsResolverService }}
-    ]*/},
-  { path: 'productPage/:id',
-    component: ProductDetailsComponent,
-    resolve: {
-    resolvedData: ProductDetailsResolverService,
-      relatedProductsData: HomePageResolverService
-  }},
+  { path:'contact', component: ContactPageComponent},
+  { path: 'search/:productName', component: SearchPageComponent, resolve: { resolvedData: SearchPageResolverService }},
+  { path: 'productPage/:id', component: ProductDetailsComponent, resolve: {resolvedData: ProductDetailsResolverService, relatedProductsData: HomePageResolverService}},
 ];
 
 @NgModule({
