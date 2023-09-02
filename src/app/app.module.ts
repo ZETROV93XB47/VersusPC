@@ -16,6 +16,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductDetailsBlockComponent } from './product-details-block/product-details-block.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { RegistrationPageComponent } from './components/registration-page/registration-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
     ProductDetailsComponent,
     FooterComponent,
     ProductDetailsBlockComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    RegistrationPageComponent
   ],
     imports: [
         BrowserModule,
