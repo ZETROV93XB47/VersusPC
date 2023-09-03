@@ -9,11 +9,13 @@ import {HomePageResolverService} from "./resolvers/HomePageResolverService";
 import {ProductDetailsComponent} from "./components/product-details/product-details.component";
 import {ContactPageComponent} from "./components/contact-page/contact-page.component";
 import {CartPageComponent} from "./components/cart-page/cart-page.component";
+import {RegistrationPageComponent} from "./components/registration-page/registration-page.component";
 
 const routes: Routes = [
   { path: '', component: HomePageComponent, resolve: { resolvedData: HomePageResolverService }},
   { path: 'home', component: HomePageComponent, resolve: { resolvedData: HomePageResolverService }},
   { path:'contact', component: ContactPageComponent},
+  { path:'registration', component: RegistrationPageComponent},
   { path:'cart', component: CartPageComponent},
   { path: 'search/:productName', component: SearchPageComponent, resolve: { resolvedData: SearchPageResolverService }},
   { path: 'productPage/:id', component: ProductDetailsComponent, resolve: {resolvedData: ProductDetailsResolverService, relatedProductsData: HomePageResolverService}},
