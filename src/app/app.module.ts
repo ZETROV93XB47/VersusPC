@@ -14,7 +14,7 @@ import { SearchPageComponent } from './components/search-page/search-page.compon
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ProductDetailsBlockComponent } from './product-details-block/product-details-block.component';
+import { ProductDetailsBlockComponent } from './components/product-details-block/product-details-block.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { RegistrationPageComponent } from './components/registration-page/registration-page.component';
 import { CartPageComponent } from './components/cart-page/cart-page.component';

@@ -34,13 +34,21 @@
 }
 
 .contactPageContent{
-  width: 90%;
+  width: 50%;
   //border: 5px solid red;
-  height:50em;
+  //height:50em;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
+
+  padding: 50px;
+  //justify-content:center;
+  border-radius:10px;
+  Height: auto;
+  margin-top:50px;
+  //margin-bottom:30px;
+  box-shadow: 0px 0px 50px 3px rgba(0,0,0,0.30);
 }
 
 .contactPageContent div {
@@ -127,4 +135,8 @@
 
 .submit-button:hover {
   background-color: #d1401a;
+}
+
+.title{
+  color: #525252;
 }
