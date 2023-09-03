@@ -1,5 +1,14 @@
 <div class="container">
     <div class="searchPage">
-    <app-product-block *ngFor="let data of resolvedData" [productData]="data"></app-product-block>
+
+        <div class="conditionalSearchPage" *ngIf="resolvedData.length>0; else nothingHere">
+            <app-product-block
+                    *ngFor="let data of resolvedData" [productData]="data">
+            </app-product-block>
+        </div>
+        <ng-template #nothingHere>
+            <p>Oups........, we didn't find any product corresonding to your seach keyword :/</p>
+        </ng-template>
+
     </div>
 </div>

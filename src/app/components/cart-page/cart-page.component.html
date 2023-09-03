@@ -1,0 +1,50 @@
+<div class="cartPageContainer">
+
+    <div class="presentation">
+        <img src="assets/Images/cart.jpg">
+        <div class="border-overlay"></div>
+    </div>
+    <div class="cartPageContent">
+        <div class="titles">
+            <div class="product">
+                <p>Product</p>
+            </div>
+            <div class="others">
+                <p>Price</p>
+            </div>
+            <div class="others">
+                <p>Quantity</p>
+            </div>
+            <div class="others">
+                <p>Total</p>
+            </div>
+        </div>
+        <div class="details" *ngFor="let p of cartProduct; let indexOfProduct = index;">
+            <div class="productImg">
+                <img src="{{getProductPhoto(indexOfProduct)}}">
+            </div>
+            <div class="productDescription">
+                <p>{{getProductDescription(indexOfProduct)}}</p>
+            </div>
+            <div class="productPrice">
+                <p>{{getProductPrice(indexOfProduct)}}$</p>
+            </div>
+            <div class="productQuantity" >
+                <p>{{getNumberOfProducts(indexOfProduct)}}</p>
+            </div>
+            <div class="productTotal">
+                <p>{{getProductTotal()}}$</p>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+</div>

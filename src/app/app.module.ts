@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductDetailsBlockComponent } from './product-details-block/product-details-block.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { RegistrationPageComponent } from './components/registration-page/registration-page.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RegistrationPageComponent } from './components/registration-page/regist
     FooterComponent,
     ProductDetailsBlockComponent,
     ContactPageComponent,
-    RegistrationPageComponent
+    RegistrationPageComponent,
+    CartPageComponent
   ],
     imports: [
         BrowserModule,

@@ -40,6 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .contactPageContent div {
@@ -50,10 +51,10 @@
 
 .contactForm{
   width: 50%;
-  color: darkgray;
+  color: #525252;
   display: flex;
   flex-direction: column;
-  margin-right: 10px;
+  margin-right: 3%;
 }
 
 .contactForm textarea {
